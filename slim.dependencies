@@ -26,7 +26,7 @@
   },
   {
     "repository":  "CyanogenMod/android_hardware_qcom_display-caf-new",
-    "target_path": "hardware/qcom/display-caf",
+    "target_path": "hardware/qcom/display-caf-new",
     "branch":      "cm-11.0"
   },
   {
