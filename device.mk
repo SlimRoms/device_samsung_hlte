@@ -21,7 +21,6 @@ $(call inherit-product-if-exists, vendor/samsung/hlte/hlte-vendor.mk)
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/hlte/overlay
-PRODUCT_PACKAGES_OVERLAY += device/samsung/hlte/overlay-telephony
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
