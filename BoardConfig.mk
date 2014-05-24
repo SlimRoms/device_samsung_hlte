@@ -63,6 +63,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1572864000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 28651290624
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+BOARD_RECOVERY_SWIPE := true
+
 # bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/hlte/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/hlte/bluetooth/vnd_hlte.txt
@@ -80,6 +82,7 @@ TARGET_QCOM_MEDIA_VARIANT := caf-new
 TARGET_QCOM_DISPLAY_VARIANT := caf-new
 BOARD_USES_LEGACY_ALSA_AUDIO := 
 TARGET_QCOM_AUDIO_VARIANT := caf
+TARGET_USES_QCOM_BSP := true
 
 # Audio settings
 BOARD_USES_CUSTOM_AUDIO_PLATFORM_PATH := device/samsung/hlte/audio/platform
@@ -122,7 +125,8 @@ TARGET_OTA_ASSERT_DEVICE := hltexx,hltespr,hltetmo,SM-N900T,hltecan,hlteatt,hlte
 
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlte_eur_defconfig
 
-# PowerHAL extension
+# PowerHAL
+TARGET_POWERHAL_VARIANT := qcom
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/hlte/power/power_ext.c
 
 # The "new" GPS is really the old GPS, override it.
