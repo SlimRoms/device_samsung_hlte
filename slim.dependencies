@@ -20,11 +20,6 @@
     "branch":      "cm-11.0"
   },
   {
-    "repository":  "SlimRoms/proprietary_vendor_samsung",
-    "target_path": "vendor/samsung",
-    "branch":      "kk4.4"
-  },
-  {
     "repository":  "SlimRoms/hardware_qcom_display-caf-new",
     "target_path": "hardware/qcom/display-caf-new",
     "branch":      "kk4.4"
