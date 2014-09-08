@@ -16,7 +16,7 @@
   },
   {
    "repository": "SlimRoms/device_samsung_hlte-common",
-    "target_path": "device/samsung/msm8974-common",
+    "target_path": "device/samsung/hlte-common",
     "branch": "kk4.4"
   },
   {
