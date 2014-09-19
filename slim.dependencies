@@ -20,9 +20,9 @@
     "branch": "kk4.4"
   },
   {
-    "repository": "CyanogenMod/android_kernel_samsung_hlte",
+    "repository": "SlimRoms/kernel_samsung_hlte",
     "target_path": "kernel/samsung/hlte",
-    "branch":      "cm-11.0"
+    "branch":      "kk4.4"
   },
   {
     "repository":  "SlimRoms/hardware_qcom_display-caf-new",
