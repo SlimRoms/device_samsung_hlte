@@ -54,28 +54,27 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "N900W8")) {
-        /* hltecan */
-        gsm_properties();
-        property_set("ro.build.fingerprint", "samsung/hltecan/hlte:4.4.2/KOT49H/N900W8VLUCND5:user/release-keys");
-        property_set("ro.build.description", "hltecan-user 4.4.2 KOT49H N900W8VLUCND5 release-keys");
-        property_set("ro.product.model", "SM-N900W8");
-        property_set("ro.product.device", "hltecan");
-    } else if (strstr(bootloader, "N900T")) {
-        /* hltetmo */
-        gsm_properties();
-        property_set("ro.build.fingerprint", "samsung/hltetmo/hltetmo:4.4.2/KOT49H/N900TUVUCNB4:user/release-keys");
-        property_set("ro.build.description", "hltetmo-user 4.4.2 KOT49H N900TUVUCNB4 release-keys");
-        property_set("ro.product.model", "SM-N900T");
-        property_set("ro.product.device", "hltetmo");
+    gsm_properties();
+    if (strstr(bootloader, "N900S")) {
+        /* hlteskt */
+        property_set("ro.build.fingerprint", "samsung/hlteskt/hlte:4.4.2/KOT49H/N900SKSUFNH4:user/release-keys");
+        property_set("ro.build.description", "hlteskt-user 4.4.2 KOT49H N900SKSUFNH4 release-keys");
+        property_set("ro.product.model", "SM-N900S");
+        property_set("ro.product.device", "hlteskt");
+    } else if (strstr(bootloader, "N900K")) {
+        /* hltektt */
+        property_set("ro.build.fingerprint", "samsung/hltektt/hlte:4.4.2/KOT49H/N900KKKUFNI1:user/release-keys");
+        property_set("ro.build.description", "hltektt-user 4.4.2 KOT49H N900KKKUFNI1 release-keys");
+        property_set("ro.product.model", "SM-N900K");
+        property_set("ro.product.device", "hltektt");
     } else {
         /* hltexx */
-        gsm_properties();
         property_set("ro.build.fingerprint", "samsung/hltexx/hlte:4.4.2/KOT49H/N9005XXUENC2:user/release-keys");
         property_set("ro.build.description", "hltexx-user 4.4.2 KOT49H N9005XXUENC2 release-keys");
         property_set("ro.product.model", "SM-N9005");
         property_set("ro.product.device", "hltexx");
     }
+
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
     ERROR("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
