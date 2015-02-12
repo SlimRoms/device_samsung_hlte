@@ -53,12 +53,11 @@ public class HlteRIL extends RIL implements CommandsInterface {
 
     public HlteRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
-        super(context, preferredNetworkType, cdmaSubscription, instanceId);
-        mQANElements = 6;
-    }
+        this(context, preferredNetworkType, cdmaSubscription);
+	}
 
     public HlteRIL(Context context, int networkMode, int cdmaSubscription) {
-        super(context, networkMode, cdmaSubscription, null);
+        super(context, networkMode, cdmaSubscription);
         mQANElements = 6;
     }
 
